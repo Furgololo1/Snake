@@ -5,14 +5,13 @@
 
 class Walls
 {
+	sf::RenderWindow* _RenderWindow = nullptr;
 
-	sf::RenderWindow* RenderWindow;
-
-	std::vector<sf::RectangleShape>* Wall;
+	std::vector<sf::RectangleShape*> Wall;
 
 public:
 
-	Walls();
+	Walls() {};
 
 	void SetupWalls(sf::RenderWindow& RW);
 	

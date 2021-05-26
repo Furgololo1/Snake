@@ -1,11 +1,12 @@
-﻿  SFML1.cpp
-F:\SFML\SFML1\SFML1\Walls.h(12,43): error C2280: „sf::RenderWindow::RenderWindow(const sf::RenderWindow &)”: próba odwania do usuniętej funkcji
-F:\Libraries\SFML\include\SFML\Graphics\RenderWindow.hpp(180): message : w tym miejscu kompilator wygenerował „sf::RenderWindow::RenderWindow”
-F:\Libraries\SFML\include\SFML\Graphics\RenderWindow.hpp(180,1): message : „sf::RenderWindow::RenderWindow(const sf::RenderWindow &)”: Funkcja została niejawnie usunięta, ponieważ element klasa bazowa wywołuje usuniętą lub niedostępną funkcję „sf::Window::Window(const sf::Window &)”
-F:\Libraries\SFML\include\SFML\Window\Window.hpp(550,1): message : „sf::Window::Window(const sf::Window &)”: Funkcja została niejawnie usunięta, ponieważ element klasa bazowa wywołuje usuniętą lub niedostępną funkcję „sf::NonCopyable::NonCopyable(const sf::NonCopyable &)”
-  Walls.cpp
-F:\SFML\SFML1\SFML1\Walls.h(12,43): error C2280: „sf::RenderWindow::RenderWindow(const sf::RenderWindow &)”: próba odwania do usuniętej funkcji
-F:\Libraries\SFML\include\SFML\Graphics\RenderWindow.hpp(180): message : w tym miejscu kompilator wygenerował „sf::RenderWindow::RenderWindow”
-F:\Libraries\SFML\include\SFML\Graphics\RenderWindow.hpp(180,1): message : „sf::RenderWindow::RenderWindow(const sf::RenderWindow &)”: Funkcja została niejawnie usunięta, ponieważ element klasa bazowa wywołuje usuniętą lub niedostępną funkcję „sf::Window::Window(const sf::Window &)”
-F:\Libraries\SFML\include\SFML\Window\Window.hpp(550,1): message : „sf::Window::Window(const sf::Window &)”: Funkcja została niejawnie usunięta, ponieważ element klasa bazowa wywołuje usuniętą lub niedostępną funkcję „sf::NonCopyable::NonCopyable(const sf::NonCopyable &)”
-  Generowanie kodu...
+﻿  Walls.cpp
+F:\SFML\Snake\SFML1\Walls.cpp(8,10): warning C4244: "inicjowanie": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+F:\SFML\Snake\SFML1\Walls.cpp(9,10): warning C4244: "inicjowanie": konwersja z "T" do "float", możliwa utrata danych
+          with
+          [
+              T=unsigned int
+          ]
+  SFML1.vcxproj -> F:\SFML\Snake\x64\Debug\SFML1.exe
