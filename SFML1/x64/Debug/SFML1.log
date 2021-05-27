@@ -1,12 +1,14 @@
-﻿  Walls.cpp
-F:\SFML\Snake\SFML1\Walls.cpp(8,10): warning C4244: "inicjowanie": konwersja z "T" do "float", możliwa utrata danych
+﻿  SFML1.cpp
+  Walls.cpp
+D:\C++_SFML\Snake\SFML1\Walls.cpp(12,10): warning C4244: "inicjowanie": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-F:\SFML\Snake\SFML1\Walls.cpp(9,10): warning C4244: "inicjowanie": konwersja z "T" do "float", możliwa utrata danych
+D:\C++_SFML\Snake\SFML1\Walls.cpp(13,10): warning C4244: "inicjowanie": konwersja z "T" do "float", możliwa utrata danych
           with
           [
               T=unsigned int
           ]
-  SFML1.vcxproj -> F:\SFML\Snake\x64\Debug\SFML1.exe
+  Generowanie kodu...
+  SFML1.vcxproj -> D:\C++_SFML\Snake\x64\Debug\SFML1.exe

@@ -6,13 +6,14 @@
 
 int main()
 {
-    sf::RenderWindow* RW = new sf::RenderWindow(sf::VideoMode(1280, 720), "Snake");
+    sf::RenderWindow* RW = new sf::RenderWindow(sf::VideoMode(1280, 720), "Snake", sf::Style::None);
 
     sf::Clock clock;
 
     sf::RectangleShape Rect(sf::Vector2f(25,25));
     sf::Color color(0,255,0);
     Rect.setFillColor(color);
+
 
     float x = 560.f;
     float y = 615.f;
@@ -69,7 +70,14 @@ int main()
             RW->draw(Rect);
         }
 
-     
+        wall->DrawWalls();
+        std::vector<sf::RectangleShape>* WallsArr;
+
+        WallsArr = wall->GetWalls();
+        //for (int i = 0; i < 4; i++)
+           // RW->draw(*WallsArr[i]);
+        
+      
         //RW.draw(Ground);
 
         RW->display();
