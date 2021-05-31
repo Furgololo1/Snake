@@ -3,20 +3,22 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
 
+using namespace sf;
+
 class Walls
 {
-	sf::RenderWindow* _RenderWindow = nullptr;
+	RenderWindow* _RenderWindow = nullptr;
 
-	std::vector<sf::RectangleShape>* Wall = new std::vector<sf::RectangleShape>();
+	std::vector<RectangleShape>* Wall = new std::vector<RectangleShape>();
 
 public:
 
 	Walls();
 
-	void SetupWalls(sf::RenderWindow& RW);
+	void SetupWalls(RenderWindow& RW);
 
 	void DrawWalls();
-	std::vector<sf::RectangleShape>* GetWalls() { return Wall; };
+	std::vector<RectangleShape> GetWalls() { return *Wall; };
 	
 };
 

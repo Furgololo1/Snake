@@ -1,34 +1,34 @@
 #include "Walls.h"
 
-
+using namespace sf;
 
 Walls::Walls() {}
 
-void Walls::SetupWalls(sf::RenderWindow& RW)
+void Walls::SetupWalls(RenderWindow& RW)
 {
 	_RenderWindow = &RW;
-	sf::Vector2u WindowSize = _RenderWindow->getSize();
+	Vector2u WindowSize = _RenderWindow->getSize();
 
-	float x = WindowSize.x;
-	float y = WindowSize.y;
+	float x = (float)WindowSize.x;
+	float y = (float)WindowSize.y;
 
 	//delete WindowSize;
 
-	sf::RectangleShape* Rect = new sf::RectangleShape;
+	RectangleShape* Rect = new RectangleShape;
 
 	for (int i = 0; i < 4; i++)
 		Wall->push_back(*Rect);
 	
-	sf::Color WallsColor(0, 0, 255);
+	Color WallsColor(0, 0, 255);
 
 	for (int i = 0; i < 4; i++) {
 		(*Wall)[i].setFillColor(WallsColor);
 
 		if (i == 0 || i == 1) {
-			(*Wall)[i].setSize(sf::Vector2f(5.f, y));
+			(*Wall)[i].setSize(Vector2f(5.f, y));
 		}
 		else if (i == 2 || i == 3) {
-			(*Wall)[i].setSize(sf::Vector2f(x, 5.f));
+			(*Wall)[i].setSize(Vector2f(x, 5.f));
 		}
 	}
 	
@@ -45,9 +45,4 @@ void Walls::DrawWalls()
 {
 	for (int i = 0; i < 4; i++)
 		_RenderWindow->draw((*Wall)[i]);
-
-	//_RenderWindow->draw(*Wall[2]);
-	//_RenderWindow->draw(*(Wall)[1]);
-	//_RenderWindow->draw(*Wall[2]);
-	//_RenderWindow->draw(*Wall[3]);
 }
