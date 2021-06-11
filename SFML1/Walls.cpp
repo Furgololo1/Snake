@@ -25,7 +25,7 @@ void Walls::SetupWalls(RenderWindow& RW)
 		(*Wall)[i].setFillColor(WallsColor);
 
 		if (i == 0 || i == 1) {
-			(*Wall)[i].setSize(Vector2f(5.f, y));
+			(*Wall)[i].setSize(Vector2f(5.f, y-100.f));
 		}
 		else if (i == 2 || i == 3) {
 			(*Wall)[i].setSize(Vector2f(x, 5.f));
@@ -33,7 +33,7 @@ void Walls::SetupWalls(RenderWindow& RW)
 	}
 	
 	
-		(*Wall)[0].setPosition(0.f,0.f);
+		(*Wall)[0].setPosition(0.f,25.f);
 		(*Wall)[1].setPosition(x-5.f, 0.f);
 		(*Wall)[2].setPosition(0.f, 0.f);
 		(*Wall)[3].setPosition(0.f, y-5.f);

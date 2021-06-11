@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 #include <SFML/Graphics.hpp>
 #include "Walls.h"
-#include "Collision.h"
+//#include "Collision.h"
 
 using namespace sf;
 
@@ -22,8 +22,8 @@ int main()
     Walls* wall = new Walls;
     wall->SetupWalls(*RW);
 
-    Collision* collision = new Collision(&rect, wall->GetWalls());
-    collision->StartCollision();
+    //Collision* collision = new Collision(&rect, wall->GetWalls());
+    //collision->StartCollision();
 
     ////////////////////////////////
  
@@ -35,8 +35,7 @@ int main()
             if (clock.getElapsedTime().asMilliseconds() % 10 == 0) {
                 if (x >= 1280.f) x = -100.f;
                 RW->clear();
-                x += 0.5;
-                collision->UpdateRectPos(rect.getPosition());
+                x += 1.f;
                 rect.setPosition(x, y);
                 RW->draw(rect);
             }
@@ -46,8 +45,7 @@ int main()
             if (clock.getElapsedTime().asMilliseconds() % 10 == 0) {
                 if (x <= -100.f) x = 1380.f;
                 RW->clear();
-                x -= 0.5;
-                collision->UpdateRectPos(rect.getPosition());
+                x -= 1.f;
                 rect.setPosition(x, y);
                 RW->draw(rect);
             }
@@ -57,8 +55,7 @@ int main()
             if (clock.getElapsedTime().asMilliseconds() % 10 == 0) {
                 if (y >= 820.f) y = -100.f;
                 RW->clear();
-                y += 0.5;
-                collision->UpdateRectPos(rect.getPosition());
+                y += 1.f;
                 rect.setPosition(x, y);
                 RW->draw(rect);
             }
@@ -68,8 +65,7 @@ int main()
             if (clock.getElapsedTime().asMilliseconds() % 10 == 0) {
                 if (y <= -100.f) y = 820.f;
                 RW->clear();
-                y -= 0.5;
-                collision->UpdateRectPos(rect.getPosition());
+                y -= 1.f;
                 rect.setPosition(x, y);
                 RW->draw(rect);
             }

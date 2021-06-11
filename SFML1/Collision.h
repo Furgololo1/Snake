@@ -26,6 +26,8 @@ public:
 
 	void StartCollision();
 
+	void CheckCollision();
+
 	void ThreadFunc();
 
 
