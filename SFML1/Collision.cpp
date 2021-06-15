@@ -38,17 +38,19 @@ void Collision::ThreadFunc()
 	
 	std::cout << "Thread works" << std::endl;
 	std::vector<Vector2f>* WallsPos;
+	WallsPos = new std::vector<Vector2f>;
 
-	for (int i = 0; i < 4; i++) {
-		WallsPos->push_back(Wall[i].getPosition());
-	}
+	//for (int i = 0; i < 4; i++) {
+		//WallsPos->push_back(Wall[i].getPosition());
+	//}
 
 	while (true)
 	{
 		if(clock2.getElapsedTime().asMilliseconds() % 50 == 0){
 
 			FloatRect fRect(RectPos.x, RectPos.y, 25, 25);
-			FloatRect wallrect(WallsPos[i].x, WallsPos.y, Wall[0].getSize().x, Wall[0].getSize().y);
+			//FloatRect wallrect((*WallsPos)[0].x, (*WallsPos)[0].y, Wall[0].getSize().x, Wall[0].getSize().y);
+			FloatRect wallrect(300, 300, 600, 600);
 
 			if (fRect.intersects(wallrect)) {
 				std::cout << "Collision" << std::endl;
@@ -62,4 +64,3 @@ void Collision::ThreadFunc()
 
 }
 
-*/

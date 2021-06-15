@@ -1,9 +1,27 @@
 ﻿#include <iostream>
 #include <SFML/Graphics.hpp>
+#include <thread>
+#include <future>
+#include <chrono>
 #include "Walls.h"
-//#include "Collision.h"
+#include "Collision.h"
 
 using namespace sf;
+
+
+bool StartGame()
+{
+    for (int i = 0; i < 10; i++) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::cout << "Start sleep no. " << i << std::endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+        std::cout << "End sleep no. " << i << std::endl;
+
+    }
+
+    return true;
+}
+
 
 int main()
 {
@@ -22,13 +40,17 @@ int main()
     Walls* wall = new Walls;
     wall->SetupWalls(*RW);
 
-    //Collision* collision = new Collision(&rect, wall->GetWalls());
-    //collision->StartCollision();
+    Collision* collision = new Collision(&rect, wall->GetWalls());
+  
+    std::future<void> a = std::async( &Collision::ThreadFunc, *collision );
+    
 
     ////////////////////////////////
  
 
     while (RW->isOpen()) {
+
+
 
         if (Keyboard::isKeyPressed(Keyboard::D)) {
 
@@ -84,6 +106,7 @@ int main()
     
     return 0;
 }
+
 
 
 
